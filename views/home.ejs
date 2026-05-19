@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>Student DashBoard</h1></center>
+    <table border="1" width="500" align="center">
+    <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Course</th>
+        <th>Action</th>
+    </thead>
+    </table>
+
+    <table border="1" width="500" align="center">
+ 
+    <tbody>
+        <% studentDetails.forEach(stu=>{%>
+            <tr>
+                <td><%=stu.name%></td>
+                <td><%=stu.email%></td>
+                <td><%=stu.phone%></td>
+                <td><%=stu.course%></td>
+                <td><a href="#">🔍</a>||<a href="#">✏️</a></td>
+            </tr>
+        <%})%>
+    </tbody>
+    </table>
+
+</body>
+</html>
