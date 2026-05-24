@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,14 @@
     "express": "^5.2.1",
     "mongoose": "^9.6.2",
     "nodemon": "^3.1.14"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaunakSharma0067/ejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RaunakSharma0067/ejs/issues"
+  },
+  "homepage": "https://github.com/RaunakSharma0067/ejs#readme"
 }
