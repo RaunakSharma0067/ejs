@@ -29,21 +29,21 @@ let userschema=new mongoose.Schema({
 
 let User=new mongoose.model('user',userschema)
 
-app.get('/',(req,res)=>res.render('add-user'))
+app.get('/',(req,res)=>res.render('userpage'))
 
-app.post('/add-user',async(req,res)=>{
-    try{
-        let user=await User.create(req.body)
-        if(User)
-            res.send('User Saved SuccessFully')
-    }catch(err){
-        if(err.code==11000)
-            res.send('This Eamil Is Already Exists!')
-        else
-            res.send(err.message)
+// app.post('/add-user',async(req,res)=>{
+//     try{
+//         let user=await User.create(req.body)
+//         if(User)
+//             res.send('User Saved SuccessFully')
+//     }catch(err){
+//         if(err.code==11000)
+//             res.send('This Eamil Is Already Exists!')
+//         else
+//             res.send(err.message)
 
-    }   
-})
+//     }   
+// })
 
 app.listen(5000,()=>{
     console.log('Server Is Running On http://localhost:5000')

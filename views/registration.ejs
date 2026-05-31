@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#f2f2f2;
+        }
+
+        .container{
+            width:400px;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        .form-group{
+            margin-bottom:15px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:5px;
+            font-weight:bold;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            outline:none;
+        }
+
+        input:focus{
+            border-color:#007bff;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#007bff;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+
+        <form action="/register" method="POST">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter password" required>
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirmPassword" placeholder="please Confirm Your Password" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" name="phone" placeholder="Enter phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="role">Select Role</label>
+
+    <select name="role" id="role">
+
+        <option value="">-- Select Role --</option>
+
+        <option value="admin">Admin</option>
+
+        <option value="student">Student</option>
+
+    </select>
+            </div>
+            
+            <button type="submit">Register</button>
+            
+             <div class="register-link">
+                <center><p>Click To Login If You Know Your Password <a href="/login">Login</a></p>
+                </center>
+        </div>
+        </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
